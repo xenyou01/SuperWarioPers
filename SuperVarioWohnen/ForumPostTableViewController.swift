@@ -54,7 +54,7 @@ class ForumPostTableViewController: UITableViewController {
         // Configure the cell...
         cell.nameLabel.text = post.user
         cell.titleLabel.text = post.title
-        cell.textLabel?.text = post.postText
+        cell.postLabel.text = post.postText
         cell.dateLabel.text = post.date.description
         
 
@@ -110,7 +110,7 @@ class ForumPostTableViewController: UITableViewController {
     //MARK: Private Methods
     private func loadForumPost() {
         for _ in 1 ..< 11 {
-            guard let forumPost = ForumPost(user: "Gires Ntchouayang", title: "Hier ist der Titel", postText: "Lorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizou", date: Date.init())
+            guard let forumPost = ForumPost(user: "Gires Ntchouayang", title: "Hier ist der Titel", postText: "Lorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizouorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizo", date: Date.init())
                 else{
                     fatalError("Konnte kein Post erzeugen...")
             }
