@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BC50F01FEB1A0E00714B3A /* ForumPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC50EF1FEB1A0E00714B3A /* ForumPost.swift */; };
+		89BC50F21FEB217500714B3A /* ForumPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC50F11FEB217500714B3A /* ForumPostTableViewCell.swift */; };
+		89FD01371FFD69E200E9C5C5 /* ForumPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89FD01361FFD69E200E9C5C5 /* ForumPostTableViewController.swift */; };
 		F64615EA1FA8790D007EB0A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64615E91FA8790D007EB0A0 /* AppDelegate.swift */; };
 		F64615EC1FA8790D007EB0A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64615EB1FA8790D007EB0A0 /* ViewController.swift */; };
 		F64615EF1FA8790D007EB0A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F64615ED1FA8790D007EB0A0 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89BC50EF1FEB1A0E00714B3A /* ForumPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPost.swift; sourceTree = "<group>"; };
+		89BC50F11FEB217500714B3A /* ForumPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPostTableViewCell.swift; sourceTree = "<group>"; };
+		89FD01361FFD69E200E9C5C5 /* ForumPostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPostTableViewController.swift; sourceTree = "<group>"; };
 		F64615E61FA8790C007EB0A0 /* SuperVarioWohnen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperVarioWohnen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F64615E91FA8790D007EB0A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64615EB1FA8790D007EB0A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				F64615E91FA8790D007EB0A0 /* AppDelegate.swift */,
+				89BC50EF1FEB1A0E00714B3A /* ForumPost.swift */,
+				89BC50F11FEB217500714B3A /* ForumPostTableViewCell.swift */,
 				F64615EB1FA8790D007EB0A0 /* ViewController.swift */,
+				89FD01361FFD69E200E9C5C5 /* ForumPostTableViewController.swift */,
 				F64615ED1FA8790D007EB0A0 /* Main.storyboard */,
 				F64615F01FA8790D007EB0A0 /* Assets.xcassets */,
 				F64615F21FA8790D007EB0A0 /* LaunchScreen.storyboard */,
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F64615EC1FA8790D007EB0A0 /* ViewController.swift in Sources */,
+				89FD01371FFD69E200E9C5C5 /* ForumPostTableViewController.swift in Sources */,
+				89BC50F21FEB217500714B3A /* ForumPostTableViewCell.swift in Sources */,
 				F64615EA1FA8790D007EB0A0 /* AppDelegate.swift in Sources */,
+				89BC50F01FEB1A0E00714B3A /* ForumPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
