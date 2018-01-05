@@ -12,6 +12,7 @@ class ForumPostTableViewController: UITableViewController {
     
     //MARK: Properties
     var forumPosts = [ForumPost]()
+    let url = URL(string: "https://thecodelabs.de:2530/forum/1")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +58,6 @@ class ForumPostTableViewController: UITableViewController {
         cell.postLabel.text = post.postText
         cell.dateLabel.text = post.date.description
         
-
         return cell
     }
     
@@ -109,13 +109,56 @@ class ForumPostTableViewController: UITableViewController {
     
     //MARK: Private Methods
     private func loadForumPost() {
-        for _ in 1 ..< 11 {
+        var request = URLRequest(url: url!)
+        request.setValue("ztiuohijopk", forHTTPHeaderField: "auth")
+        request.httpMethod = "GET"
+        
+        let session = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do{
+                    let jsonObject = try JSONSerialization.jsonObject(with: data, options: []) as? [Any]
+                    if let json = jsonObject {
+                        for index in 0...json.count-1{
+                            let postElmt = json[index] as! [String : Any]
+                            let datestr = postElmt["date"] as! String
+                            let dateformatter = DateFormatter()
+                            dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+                            let date = dateformatter.date(from: datestr)!
+                            let tenant = postElmt["tenant"] as! [String : Any]
+                            let name = tenant["name"] as! String
+                            let lastname = tenant["lastName"] as! String
+                            let user = name + " " + lastname
+                            let title = postElmt["title"] as! String
+                            let message = postElmt["message"] as! String
+                            guard let forumpost = ForumPost(user: user, title: title, postText: message, date: date)
+                                else{
+                                    fatalError("Fehler bei der Instanziierung von Post Objekte!!")
+                            }
+                            /*print(user)
+                            print(title)
+                            print(message)
+                            print(date)*/
+                            self.forumPosts += [forumpost]
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                } catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        session.resume()
+        /*for _ in 1 ..< 11 {
             guard let forumPost = ForumPost(user: "Gires Ntchouayang", title: "Hier ist der Titel", postText: "Lorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizouorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizo", date: Date.init())
                 else{
                     fatalError("Konnte kein Post erzeugen...")
             }
             forumPosts += [forumPost]
-        }
+        }*/
     }
 
 }
