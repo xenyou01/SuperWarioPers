@@ -20,7 +20,7 @@ class ForumPost {
     //MARK: Initialization
     
     init?(user: String, title: String, postText: String, date: Date) {
-        if user.isEmpty || title.isEmpty || postText.isEmpty {
+        if user.isEmpty || postText.isEmpty {
             return nil
         }
         self.user = user

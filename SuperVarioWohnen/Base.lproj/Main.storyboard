@@ -331,39 +331,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumAnswerTableViewCell" rowHeight="74" id="AfX-D2-Gch" customClass="ForumAnswerTableViewCell" customModule="SuperVarioWohnen" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForumAnswerTableViewCell" rowHeight="140" id="AfX-D2-Gch" customClass="ForumAnswerTableViewCell" customModule="SuperVarioWohnen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AfX-D2-Gch" id="Cpp-9b-7NC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9L-zj-EEp">
                                             <rect key="frame" x="32" y="0.0" width="311" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-QT-7ME">
-                                            <rect key="frame" x="32" y="21" width="311" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-QT-7ME">
+                                            <rect key="frame" x="32" y="21" width="311" height="24"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                            <color key="textColor" red="0.087588042919999998" green="0.15782387410000001" blue="0.25028335489999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCb-wa-X7Y">
-                                            <rect key="frame" x="32" y="42" width="311" height="21"/>
+                                            <rect key="frame" x="32" y="43" width="311" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="gp7-QT-7ME" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="P1x-X3-vtE"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="gp7-QT-7ME" secondAttribute="trailing" constant="16" id="QxI-mk-S42"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="G9L-zj-EEp" secondAttribute="trailing" constant="16" id="Wth-Ro-tKb"/>
-                                        <constraint firstItem="KCb-wa-X7Y" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="Z8f-Oo-w7p"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="KCb-wa-X7Y" secondAttribute="trailing" constant="16" id="ZER-4V-dth"/>
-                                        <constraint firstItem="G9L-zj-EEp" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="ji5-tR-T6D"/>
+                                        <constraint firstItem="gp7-QT-7ME" firstAttribute="top" secondItem="G9L-zj-EEp" secondAttribute="bottom" constant="1" id="0Ae-WX-UZK"/>
+                                        <constraint firstItem="gp7-QT-7ME" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="1wE-4z-iAS"/>
+                                        <constraint firstItem="KCb-wa-X7Y" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="8kF-53-DC9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KCb-wa-X7Y" secondAttribute="trailing" constant="16" id="Mgl-BJ-9eU"/>
+                                        <constraint firstItem="KCb-wa-X7Y" firstAttribute="top" secondItem="gp7-QT-7ME" secondAttribute="bottom" constant="1" id="RFH-0B-xzy"/>
+                                        <constraint firstItem="G9L-zj-EEp" firstAttribute="top" secondItem="Cpp-9b-7NC" secondAttribute="topMargin" constant="1" id="UNs-HN-fLA"/>
+                                        <constraint firstItem="G9L-zj-EEp" firstAttribute="leading" secondItem="Cpp-9b-7NC" secondAttribute="leadingMargin" constant="16" id="V88-au-aZR"/>
+                                        <constraint firstItem="KCb-wa-X7Y" firstAttribute="top" secondItem="gp7-QT-7ME" secondAttribute="bottom" constant="1" id="iCO-U7-D6P"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gp7-QT-7ME" secondAttribute="trailing" constant="16" id="iIA-G5-77R"/>
+                                        <constraint firstItem="gp7-QT-7ME" firstAttribute="top" secondItem="G9L-zj-EEp" secondAttribute="bottom" constant="1" id="l3e-FJ-FD9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="G9L-zj-EEp" secondAttribute="trailing" constant="16" id="rCV-RZ-dKy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KCb-wa-X7Y" secondAttribute="bottom" id="u7u-e4-8ob"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

@@ -16,7 +16,7 @@ class ForumAnswerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        LoadForumAnswe()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,7 +66,6 @@ class ForumAnswerTableViewController: UITableViewController {
             cell.titleLabel.text = forumPost?.title
             cell.answerLabel.text = forumAnswer[indexPath.section - 1].postText
         }
-        
         return cell
     }
     
@@ -123,5 +122,15 @@ class ForumAnswerTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func LoadForumAnswe() {
+        for _ in 1 ..< 11 {
+            guard let forumPost = ForumPost(user: "Gires Ntchouayang", title: "Nicht Wichtig", postText: "Lorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizouorem ipsum dolek nomia dilup dlai fgirsup nako riad olem dorek sizou de sizo", date: Date.init())
+                else{
+                    fatalError("Konnte kein Post erzeugen...")
+            }
+            forumAnswer += [forumPost]
+        }
+    }
 
 }
